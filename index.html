@@ -297,16 +297,17 @@ layout: default
     <!-- </tbody> -->
   <!-- </table> -->
  <div class="tabs">
-  <button class="tab-button active" onclick="showTab(0)">Enabling Quantum in TN</button>
-  <button class="tab-button" onclick="showTab(1)">Enabling Quantum Education</button>
-  <button class="tab-button" onclick="showTab(2)">The Chattanooga Quantum Ecosystem</button>
-  <button class="tab-button" onclick="showTab(3)">Full Quantum Stack at ORNL</button>
+  <button class="tab-button active" data-tab="panel-1">Enabling Quantum in TN</button>
+  <button class="tab-button" data-tab="panel-2">Enabling Quantum Education</button>
+  <button class="tab-button" data-tab="panel-3">The Chattanooga Quantum Ecosystem</button>
+  <button class="tab-button" data-tab="panel-4">Full Quantum Stack at ORNL</button>
 </div>
 
+<div class="tab-content-container">
 <!-- Tab Content 1 -->
-<div class="tab-content active">
+<div class="tab-content active" id="panel-1">
   <div class="panel-container">
-    <h1>Panel 1: Enabling Quantum in TN</h1>
+    <h1>Panel 1: Enabling Quantum in TN - Room 310</h1>
     <div class="carousel-wrapper">
       <div class="panel-grid" id="carousel-1">
         <div class="panelist-card">
@@ -349,9 +350,9 @@ layout: default
 </div>
 
 <!-- Tab Content 2 -->
-<div class="tab-content">
+<div class="tab-content" id="panel-2">
   <div class="panel-container">
-    <h1>Panel 2: Enabling Quantum Education</h1>
+    <h1>Panel 2: Enabling Quantum Education - Room 310</h1>
     <div class="carousel-wrapper">
       <div class="panel-grid" id="carousel-2">
         <div class="panelist-card">
@@ -389,9 +390,9 @@ layout: default
 </div>
 
 <!-- Tab Content 3 -->
-<div class="tab-content">
+<div class="tab-content" id="panel-3">
   <div class="panel-container">
-    <h1>Panel 3: The Chattanooga Quantum Ecosystem</h1>
+    <h1>Panel 3: The Chattanooga Quantum Ecosystem - Room 310</h1>
     <div class="carousel-wrapper">
       <div class="panel-grid" id="carousel-3">
         <div class="panelist-card">
@@ -434,9 +435,9 @@ layout: default
 </div>
 
 <!-- Tab Content 4 -->
-<div class="tab-content">
+<div class="tab-content" id="panel-4">
   <div class="panel-container">
-    <h1>Panel 4: Full Quantum Stack at ORNL</h1>
+    <h1>Panel 4: Full Quantum Stack at ORNL - room 147</h1>
     <div class="carousel-wrapper">
       <div class="panel-grid" id="carousel-4">
         <div class="panelist-card">
@@ -472,12 +473,12 @@ layout: default
       </div>
     </div>
     <div class="carousel-controls">
-      <button class="carousel-button" onclick="prevSlide(3)">Previous</button>
-      <button class="carousel-button" onclick="nextSlide(3)">Next</button>
+      <button class="carousel-button" onclick="prevSlide(4)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(4)">Next</button>
     </div>
   </div>
 </div>
-
+</div>
   
   
 </section>
@@ -490,233 +491,232 @@ layout: default
 Write a bit about the birds of a feather sessions - short introduction, format of discussions, 
 presentations, etc.
 </p>
-<!-- <table class="styled-table"> -->
-    <!-- <thead> -->
-      <!-- <tr> -->
-        <!-- <th>Optimization</th> -->
-        <!-- <th>AI</th> -->
-        <!-- <th>Quantum Hardware and Networking</th> -->
-        <!-- <th>Hybrid Computing</th> -->
-        <!-- <th>Quantum Chemistry</th> -->
-      <!-- </tr> -->
-    <!-- </thead> -->
-    <!-- <tbody> -->
-      <!-- <tr> -->
-        <!-- <td  >Denny Dahl</td> -->
-        <!-- <td  >Vadim</td> -->
-        <!-- <td  >Duncan Earl</td> -->
-        <!-- <td  >Daniel Pompa</td> -->
-        <!-- <td  >Tim Rogers</td> -->
-      <!-- </tr> -->
-      <!-- <tr> -->
-        <!-- <td>Jim Ostrowksi</td> -->
-        <!-- <td>Adrian Del Maestro</td> -->
-        <!-- <td>Arshag Danageozian</td> -->
-        <!-- <td>Phil Lotshaw</td> -->
-        <!-- <td>Nora Bauer</td> -->
-      <!-- </tr> -->
-      <!-- <tr> -->
-        <!-- <td>Salhi, Marouane</td> -->
-        <!-- <td>Nora Bauer</td> -->
-        <!-- <td>Yujun Choi</td> -->
-        <!-- <td>In-Saeng/Seongmin</td> -->
-        <!-- <td>Breanna Muldowney</td> -->
-      <!-- </tr> -->
-      <!-- <tr> -->
-        <!-- <td>Rebekah Herman</td> -->
-        <!-- <td>Abhinav Rijal</td> -->
-        <!-- <td>Aziz, Ahmedullah</td> -->
-        <!-- <td>Suman</td> -->
-        <!-- <td>Thomas Papenbrock</td> -->
-      <!-- </tr> -->
-      <!-- <tr> -->
-        <!-- <td></td> -->
-        <!-- <td>Rick Mukherjee</td> -->
-        <!-- <td></td> -->
-        <!-- <td>Ryan Landfield</td> -->
-        <!-- <td>Ziling Xue</td> -->
-      <!-- </tr> -->
-      <!-- <tr> -->
-        <!-- <td></td> -->
-        <!-- <td>John Derrick</td> -->
-        <!-- <td></td> -->
-        <!-- <td>Shehata, Amir</td> -->
-        <!-- <td>Kevin Roccapriore</td> -->
-      <!-- </tr> -->
-      <!-- <tr> -->
-        <!-- <td></td> -->
-        <!-- <td></td> -->
-        <!-- <td></td> -->
-        <!-- <td></td> -->
-        <!-- <td>Ko, Wonhee</td> -->
-      <!-- </tr> -->
-    <!-- </tbody> -->
-  <!-- </table> -->
 
- <div class="panel-container">
+ <div class="tabs">
+  <button class="tab-button active" data-tab="bof-panel-1">Optimization</button>
+  <button class="tab-button" data-tab="bof-panel-2">AI</button>
+  <button class="tab-button" data-tab="bof-panel-3">Quantum Hardware and Networking</button>
+  <button class="tab-button" data-tab="bof-panel-4">Hybrid Computing</button>
+  <button class="tab-button" data-tab="bof-panel-4">Quantum Chemistry</button>
+</div>
+
+<div class="tab-content-container">
+<!-- Tab Content 1 -->
+<div class="tab-content active" id="bof-panel-1">
+  <div class="panel-container">
     <h1>Optimization - Room G001</h1>
-    <div class="panel-grid">
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 1" class="panelist-photo">
-        <h2 class="panelist-name">Denny Dahl</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 2" class="panelist-photo">
-        <h2 class="panelist-name">Jim Ostrowksi</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 3" class="panelist-photo">
-        <h2 class="panelist-name">Salhi Marouane</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 4" class="panelist-photo">
-        <h2 class="panelist-name">Rebekah Herman</h2>
-        <p class="panelist-title">Affiliation</p>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-1">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="Ryan Harring">
+          <h2 class="panelist-name">Denny Dahl</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="Saun Gleason">
+          <h2 class="panelist-name">Jim Ostrowksi</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="Janet Rehberg">
+          <h2 class="panelist-name">Salhi Marouane</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="Hanna Terletska">
+          <h2 class="panelist-name">Rebekah Herman</h2>
+          <p class="panelist-title">Org</p>
+        </div>
       </div>
     </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(1)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(1)">Next</button>
+    </div>
   </div>
-  
- <div class="panel-container">
+</div>
+
+<!-- Tab Content 2 -->
+<div class="tab-content" id="bof-panel-2">
+  <div class="panel-container">
     <h1>AI - Room 145</h1>
-    <div class="panel-grid">
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 1" class="panelist-photo">
-        <h2 class="panelist-name">Vadim</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 2" class="panelist-photo">
-        <h2 class="panelist-name">Adrian Del Maestro</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 3" class="panelist-photo">
-        <h2 class="panelist-name">Nora Bauer</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 4" class="panelist-photo">
-        <h2 class="panelist-name">Abhinav Rijal</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 5" class="panelist-photo">
-        <h2 class="panelist-name">Rick Mukherjee</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 6" class="panelist-photo">
-        <h2 class="panelist-name">John Derrick</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-    </div>
-  </div>
-  
-   <div class="panel-container">
-    <h1>Quantum Hardware - Room 200 ?? Same as Sensing/Networking?</h1>
-    <div class="panel-grid">
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 1" class="panelist-photo">
-        <h2 class="panelist-name">Duncan Earl</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 2" class="panelist-photo">
-        <h2 class="panelist-name">Arshag Danageozian</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 3" class="panelist-photo">
-        <h2 class="panelist-name">Yujun Choi</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 4" class="panelist-photo">
-        <h2 class="panelist-name">Aziz Ahmedullah</h2>
-        <p class="panelist-title">Affiliation</p>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-2">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Vadim Karpusenko</h2>
+          <p class="panelist-title">IonQ</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Adrian Del Maestro</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Nora Bauer</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		 <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Abhinav Rijal</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Rick Mukherjee</h2>
+          <p class="panelist-title">UTC</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="David Nizovsky">
+          <h2 class="panelist-name">John Derrick</h2>
+          <p class="panelist-title">Org</p>
+        </div>
       </div>
     </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(2)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(2)">Next</button>
+    </div>
   </div>
-  
-   <div class="panel-container">
+</div>
+
+<!-- Tab Content 3 -->
+<div class="tab-content" id="bof-panel-3">
+  <div class="panel-container">
+    <h1>Chemistry/Materials - Room 200</h1>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-3">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Duncan Earl</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Arshag Danageozian</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Yujun Choi</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Aziz Ahmedullah</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(3)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(3)">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tab Content 4 -->
+<div class="tab-content" id="bof-panel-4">
+  <div class="panel-container">
+    <h1>Quantum Sensing/Networking - Room 300</h1>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-4">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Daniel Pompa</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Phil Latshaw</h2>
+          <p class="panelist-title">ORNL</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">In-Saeng Suh</h2>
+          <p class="panelist-title">ORNL</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Suman Debnath</h2>
+          <p class="panelist-title">ORNL</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Ryan Landfield</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Shehata Amir</h2>
+          <p class="panelist-title">???</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(4)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(4)">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tab Content 5 -->
+<div class="tab-content" id="bof-panel-5">
+  <div class="panel-container">
     <h1>Hybrid Computing - Room 147</h1>
-    <div class="panel-grid">
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 1" class="panelist-photo">
-        <h2 class="panelist-name">Daniel Pompa</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 2" class="panelist-photo">
-        <h2 class="panelist-name">Phil Lotshaw</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 3" class="panelist-photo">
-        <h2 class="panelist-name">In-Saeng</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 4" class="panelist-photo">
-        <h2 class="panelist-name">Suman</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 5" class="panelist-photo">
-        <h2 class="panelist-name">Ryan Landfield</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 6" class="panelist-photo">
-        <h2 class="panelist-name">Shehata Amir</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-    </div>
-  </div>
-  
-   <div class="panel-container">
-    <h1>Quantum Chemistry - Room 200</h1>
-    <div class="panel-grid">
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 1" class="panelist-photo">
-        <h2 class="panelist-name">Tim</h2>
-        <p class="panelist-title">Rogers</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 2" class="panelist-photo">
-        <h2 class="panelist-name">Nora Bauer</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 3" class="panelist-photo">
-        <h2 class="panelist-name">Brenna Muldowney</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 4" class="panelist-photo">
-        <h2 class="panelist-name">Thomas Papenbrock</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 5" class="panelist-photo">
-        <h2 class="panelist-name">Ziling Xue</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 6" class="panelist-photo">
-        <h2 class="panelist-name">Kevin Roccapriore</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 7" class="panelist-photo">
-        <h2 class="panelist-name">Ko Wonhee</h2>
-        <p class="panelist-title">Affiliation</p>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-5">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Tim Rogers</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Nora Bauer</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Brenna Muldowney</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Thomas Papenbrock</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Ziling Xue</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Kevin Roccapriore</h2>
+          <p class="panelist-title">Org</p>
+        </div>
+		<div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Ko Wonhee</h2>
+          <p class="panelist-title">Org</p>
+        </div>
       </div>
     </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(5)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(5)">Next</button>
+    </div>
   </div>
+</div>
+
+
+
+</div>
+
+
+
 </section>
 
 <section class="floor floor-7" id="tech" style="font-family: 'OpenSans', sans-serif; background-color: #f5f5f5; padding: 40px; max-width: 900px; margin: 40px auto; border-radius: 8px;">

@@ -176,12 +176,7 @@ jQuery(document).ready(function($){
 	});
 });
 
- const carousels = {
-    1: { index: 0, id: "carousel-1" },
-    2: { index: 0, id: "carousel-2" },
-    3: { index: 0, id: "carousel-3" },
-	4: { index: 0, id: "carousel-4" },
-  };
+ const carouselStates = {};
 
   function getCardsPerSlide() {
     if (window.innerWidth <= 480) return 1;
@@ -189,48 +184,80 @@ jQuery(document).ready(function($){
     return 3;
   }
 
-  function updateCarousel(num) {
-    const carouselData = carousels[num];
-    const carousel = document.getElementById(carouselData.id);
-    const cardWidth = carousel.children[0].offsetWidth;
-    const offset = -carouselData.index * cardWidth;
+  function updateCarousel(id) {
+    const state = carouselStates[id];
+    const carousel = document.querySelector(`[data-carousel="${id}"] .panel-grid`);
+    const card = carousel?.children?.[0];
+    if (!carousel || !card) return;
+    const offset = -state.index * card.offsetWidth;
     carousel.style.transform = `translateX(${offset}px)`;
   }
 
-  function nextSlide(num) {
-    const carouselData = carousels[num];
-    const carousel = document.getElementById(carouselData.id);
-    const total = carousel.children.length;
+  function nextSlide(id) {
+    const state = carouselStates[id];
+    const carousel = document.querySelector(`[data-carousel="${id}"] .panel-grid`);
+    if (!carousel) return;
     const visible = getCardsPerSlide();
-    if (carouselData.index + visible < total) {
-      carouselData.index++;
-      updateCarousel(num);
+    const total = carousel.children.length;
+    if (state.index + visible < total) {
+      state.index++;
+      updateCarousel(id);
     }
   }
 
-  function prevSlide(num) {
-    const carouselData = carousels[num];
-    if (carouselData.index > 0) {
-      carouselData.index--;
-      updateCarousel(num);
+  function prevSlide(id) {
+    const state = carouselStates[id];
+    if (state.index > 0) {
+      state.index--;
+      updateCarousel(id);
     }
   }
 
-  function showTab(index) {
-    const tabs = document.querySelectorAll(".tab-content");
-    const buttons = document.querySelectorAll(".tab-button");
-    tabs.forEach((tab, i) => {
-      tab.classList.toggle("active", i === index);
-      buttons[i].classList.toggle("active", i === index);
+  function initCarousels() {
+    document.querySelectorAll("[data-carousel]").forEach((carouselDiv) => {
+      const id = carouselDiv.dataset.carousel;
+      if (!carouselStates[id]) {
+        carouselStates[id] = { index: 0 };
+        // Add button listeners for this carousel
+        const nextBtn = carouselDiv.querySelector(".carousel-button.next");
+        const prevBtn = carouselDiv.querySelector(".carousel-button.prev");
+        nextBtn?.addEventListener("click", () => nextSlide(id));
+        prevBtn?.addEventListener("click", () => prevSlide(id));
+      }
+      updateCarousel(id);
     });
-    // Update carousel in the shown tab
-    updateCarousel(index + 1);
   }
 
-  window.addEventListener("resize", () => {
-    for (const key in carousels) updateCarousel(parseInt(key));
-  });
+  function initTabs() {
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(btn =>
+      btn.addEventListener("click", () => {
+        const tabId = btn.dataset.tab;
+        tabButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        tabContents.forEach(tc =>
+          tc.classList.toggle("active", tc.id === tabId)
+        );
+
+        // On tab switch, reset and update the carousel inside
+        const carousel = document.querySelector(`#${tabId} [data-carousel]`);
+        if (carousel) {
+          const id = carousel.dataset.carousel;
+          carouselStates[id].index = 0;
+          updateCarousel(id);
+        }
+      })
+    );
+  }
 
   window.addEventListener("load", () => {
-    for (const key in carousels) updateCarousel(parseInt(key));
+    initCarousels();
+    initTabs();
+  });
+
+  window.addEventListener("resize", () => {
+    Object.keys(carouselStates).forEach(updateCarousel);
   });
