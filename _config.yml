@@ -1,10 +1,10 @@
 # Site settings
-title: NSF CSSI PI Meeting 2022
-email: cxsong@purdue.edu
+title: Quantum Immersion Day - Tennessee Edition
+email: amirmira@mtsu.edu
 description: > # this means to ignore newlines until "baseurl:"
-  NSF CSSI PI Meeting 2022
-baseurl: "/2022-meeting"
-#url: "https://cssi-pi-community.github.io"
+  Quantum Immersion Day - Tennessee Edition - June 2nd 2025
+baseurl: "/quantum_immersion_day"
+#url: "https://anirudha-mirmira.github.io"
 
 # Build settings
 markdown: kramdown
