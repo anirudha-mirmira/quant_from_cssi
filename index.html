@@ -296,38 +296,102 @@ layout: default
       <!-- </tr> -->
     <!-- </tbody> -->
   <!-- </table> -->
- 
- <div class="panel-container">
-    <h1>Enabling Quantum in TN - 1:45 pm - Room 310</h1>
-    <div class="panel-grid">
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 1" class="panelist-photo">
-        <h2 class="panelist-name">Saun Gleason</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 2" class="panelist-photo">
-        <h2 class="panelist-name">Janet Rehberg</h2>
-        <p class="panelist-title">Affiliation</p>
-      </div>
-      <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 3" class="panelist-photo">
-        <h2 class="panelist-name">Hanna Terletska</h2>
-        <p class="panelist-title">MTSU QSInitiative</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 4" class="panelist-photo">
-        <h2 class="panelist-name">David Nizovsky</h2>
-        <p class="panelist-title">Vanderbilt</p>
-      </div>
-	  <div class="panelist-card">
-        <img src="panelists/terletska.jpeg" alt="Panelist 5" class="panelist-photo">
-        <h2 class="panelist-name">Jim Ostrowski</h2>
-        <p class="panelist-title">Affiliation</p>
+ <div class="tabs">
+  <button class="tab-button active" onclick="showTab(0)">Panel 1</button>
+  <button class="tab-button" onclick="showTab(1)">Panel 2</button>
+  <button class="tab-button" onclick="showTab(2)">Panel 3</button>
+</div>
+
+<!-- Tab Content 1 -->
+<div class="tab-content active">
+  <div class="panel-container">
+    <h1>Panel 1: Enabling Quantum in TN</h1>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-1">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Alice A</h2>
+          <p class="panelist-title">Org A</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Bob B</h2>
+          <p class="panelist-title">Org B</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Carol C</h2>
+          <p class="panelist-title">Org C</p>
+        </div>
       </div>
     </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(1)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(1)">Next</button>
+    </div>
   </div>
- 
+</div>
+
+<!-- Tab Content 2 -->
+<div class="tab-content">
+  <div class="panel-container">
+    <h1>Panel 2: Future of Quantum</h1>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-2">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Dana D</h2>
+          <p class="panelist-title">Org D</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Evan E</h2>
+          <p class="panelist-title">Org E</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Fay F</h2>
+          <p class="panelist-title">Org F</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(2)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(2)">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tab Content 3 -->
+<div class="tab-content">
+  <div class="panel-container">
+    <h1>Panel 3: Quantum & Education</h1>
+    <div class="carousel-wrapper">
+      <div class="panel-grid" id="carousel-3">
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Gina G</h2>
+          <p class="panelist-title">Org G</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Henry H</h2>
+          <p class="panelist-title">Org H</p>
+        </div>
+        <div class="panelist-card">
+          <img src="panelists/terletska.jpeg" class="panelist-photo" alt="">
+          <h2 class="panelist-name">Ivy I</h2>
+          <p class="panelist-title">Org I</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-button" onclick="prevSlide(3)">Previous</button>
+      <button class="carousel-button" onclick="nextSlide(3)">Next</button>
+    </div>
+  </div>
+</div>
+
  <div class="panel-container">
     <h1>Enabling Quantum Education - 11:00 AM - Room 310</h1>
     <div class="panel-grid">

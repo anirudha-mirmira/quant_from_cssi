@@ -175,3 +175,61 @@ jQuery(document).ready(function($){
 		}
 	});
 });
+
+ const carousels = {
+    1: { index: 0, id: "carousel-1" },
+    2: { index: 0, id: "carousel-2" },
+    3: { index: 0, id: "carousel-3" },
+  };
+
+  function getCardsPerSlide() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    return 3;
+  }
+
+  function updateCarousel(num) {
+    const carouselData = carousels[num];
+    const carousel = document.getElementById(carouselData.id);
+    const cardWidth = carousel.children[0].offsetWidth;
+    const offset = -carouselData.index * cardWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+
+  function nextSlide(num) {
+    const carouselData = carousels[num];
+    const carousel = document.getElementById(carouselData.id);
+    const total = carousel.children.length;
+    const visible = getCardsPerSlide();
+    if (carouselData.index + visible < total) {
+      carouselData.index++;
+      updateCarousel(num);
+    }
+  }
+
+  function prevSlide(num) {
+    const carouselData = carousels[num];
+    if (carouselData.index > 0) {
+      carouselData.index--;
+      updateCarousel(num);
+    }
+  }
+
+  function showTab(index) {
+    const tabs = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-button");
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle("active", i === index);
+      buttons[i].classList.toggle("active", i === index);
+    });
+    // Update carousel in the shown tab
+    updateCarousel(index + 1);
+  }
+
+  window.addEventListener("resize", () => {
+    for (const key in carousels) updateCarousel(parseInt(key));
+  });
+
+  window.addEventListener("load", () => {
+    for (const key in carousels) updateCarousel(parseInt(key));
+  });
