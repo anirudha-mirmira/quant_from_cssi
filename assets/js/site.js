@@ -180,6 +180,7 @@ jQuery(document).ready(function($){
     1: { index: 0, id: "carousel-1" },
     2: { index: 0, id: "carousel-2" },
     3: { index: 0, id: "carousel-3" },
+	4: { index: 0, id: "carousel-4" },
   };
 
   function getCardsPerSlide() {
