@@ -2036,11 +2036,11 @@ tbody small {
     align-items: center;
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     position: relative;
     overflow: hidden;
     flex-wrap: wrap;
-    gap: 2rem;
+    row-gap: 2rem;
 }
 
 
@@ -2048,6 +2048,10 @@ tbody small {
 .sponsor-line {
     flex-wrap: wrap;
     justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 }
 
@@ -2055,6 +2059,10 @@ tbody small {
 .sponsor-line {
     flex-wrap: wrap;
     justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 }
 
@@ -2071,6 +2079,7 @@ tbody small {
     flex: 1 0 30%;
     max-width: 30%;
     text-align: center;
+    margin-bottom: 30px; 
 }
 }
 
