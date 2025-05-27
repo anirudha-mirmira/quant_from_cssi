@@ -2074,7 +2074,7 @@ tbody small {
 @media screen and (max-width: 575px){
 .sponsor-item {
     flex: 1 0 100%;
-    max-width: 20%;
+    max-width: 100%;
     margin-bottom: 35px; 
 }
 }
@@ -2082,7 +2082,7 @@ tbody small {
 
 /* Update the max-width and max-height to change the size of the sponsor logos.  */
 .sponsor-item img {
-    max-width: 200px;
+    max-width: 250px;
     max-height: 140px;
     object-fit: contain;
     display: block;
