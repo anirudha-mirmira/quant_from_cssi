@@ -590,6 +590,9 @@ dl dd {
 img {
 	border: 0;
 }
+hr.solid {
+  border-top: 3px solid #bbb;
+}
 h1,
 h2,
 h3,
