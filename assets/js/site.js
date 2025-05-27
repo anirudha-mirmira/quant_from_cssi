@@ -264,13 +264,13 @@ jQuery(document).ready(function($){
 
 
 //Slick for sponsors *//
-$('.sponsor-line').slick({
-	slidesToShow:5,
-	slidesToScroll:1,
-	dots: true,
-	arrows: true,
-	autoplay: true,
-	autoplaySpeed: 2000,
-	infinite: true
-});
+//$('.sponsor-line').slick({
+//	slidesToShow:5,
+//	slidesToScroll:1,
+//	dots: true,
+//	arrows: true,
+//	autoplay: true,
+//	autoplaySpeed: 2000,
+//	infinite: true
+//});
 
