@@ -2048,7 +2048,8 @@ tbody small {
 
 @media(max-width: 575px){
 .sponsor-line {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 }
 
@@ -2069,7 +2070,7 @@ tbody small {
     flex: 1 0 30%;
     max-width: 30%;
     text-align: center;
-    margin-bottom: 30px;
+/*    margin-bottom: 30px; */
 }
 }
 
@@ -2077,7 +2078,7 @@ tbody small {
 .sponsor-item {
     flex: 1 0 100%;
     max-width: 100%;
-    margin-bottom: 35px;
+/*    margin-bottom: 35px; */
 }
 }
 
