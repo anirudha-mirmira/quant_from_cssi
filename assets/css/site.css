@@ -2042,7 +2042,7 @@ tbody small {
     position: relative;
     overflow: hidden;
     flex-wrap: wrap;
-    row-gap: 2rem;
+    gap: 2rem;
 }
 
 
@@ -2062,7 +2062,10 @@ tbody small {
 
 /* Defines the sponsor image's containers */
 .sponsor-item {
+  flex: 1 0 20%;
+  max-width: 20%;
   padding: 0 4%;
+  text-align: center;
 }
 
 @media (max-width: 991px){
@@ -2070,7 +2073,6 @@ tbody small {
     flex: 1 0 30%;
     max-width: 30%;
     text-align: center;
-/*    margin-bottom: 30px; */
 }
 }
 
@@ -2088,8 +2090,17 @@ tbody small {
     max-width: 400px;
     max-height: 140px;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    image-rendering: auto;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
+.sponsor-item img:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease-in-out;
+}
 
 /* Google Maps Style */
 .google-maps {
