@@ -2001,10 +2001,8 @@ tbody small {
   }
 
 
-
-
-
-
+/* Sponsor style */
+  
 .sponsor-bar {
   background-color:inherit;
   padding:6.5rem 0 7rem 0
@@ -2031,17 +2029,17 @@ tbody small {
 }
 
 
+
 /*Defines the layout of the sponsor images */
 .sponsor-line {
     align-items: center;
     display:flex;
-    flex-wrap: wrap;
-/*    flex-direction: row; */
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    gap: 2rem;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    row-gap: 2rem;
 }
 
 
@@ -2049,11 +2047,6 @@ tbody small {
 .sponsor-line {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 0 auto;
 }
 }
 
@@ -2061,34 +2054,28 @@ tbody small {
 .sponsor-line {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 0 auto;
-    max-height: 200px;
 }
 }
 
 /* Defines the sponsor image's containers */
 .sponsor-item {
-  flex: 1 0 22%;
-  max-width: 22%;
   padding: 0 4%;
-  text-align: center;
 }
 
 @media (max-width: 991px){
 .sponsor-item {
-    flex: 0 1 30%;
+    flex: 1 0 30%;
     max-width: 30%;
+    text-align: center;
+    margin-bottom: 30px; 
 }
 }
 
 @media screen and (max-width: 575px){
 .sponsor-item {
-    flex: 0 1 100%;
+    flex: 1 0 100%;
     max-width: 100%;
+    margin-bottom: 35px; 
 }
 }
 
@@ -2105,10 +2092,12 @@ tbody small {
     transform: translateZ(0);
 }
 
-.sponsor-item img:hover {
+.sponsor-item img:hover{
 	transform: scale(1.05);
 	transition: transform 0.3s ease-in-out;
 }
+
+
 
 /* Google Maps Style */
 .google-maps {
