@@ -2016,19 +2016,22 @@ tbody small {
     margin: 0 auto;
 }
 
+/*
 .sponsor-title {
     max-width: 720px;
     margin: 0 auto 2.25rem;
     text-align: center;
 }
 
-/*Defines the title's font, size, color, and weight. */
+//*Defines the title's font, size, color, and weight. 
 .sponsor-title h2 {
     font-family: inherit;
     font-size: 3rem;
     font-weight: 700;
     color: #000000
 }
+
+*/
 
 /*Defines the layout of the sponsor images */
 .sponsor-line {
