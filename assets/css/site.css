@@ -2000,111 +2000,40 @@ tbody small {
     }
   }
 
-
-/* Sponsor style */
-  
+/*Sponsor Bar Style */
 .sponsor-bar {
-  background-color:inherit;
-  padding:6.5rem 0 7rem 0
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
-.container {
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
+.sponsor-bar a {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
-.sponsor-title {
-    max-width: 720px;
-    margin: 0 auto 2.25rem;
-    text-align: center;
+.sponsor-bar a:hover {
+  transform: scale(1.05);
 }
 
-/*Defines the title's font, size, color, and weight.*/ 
-.sponsor-title h2 {
-    font-family: inherit;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #000000
+.sponsor-bar img {
+  max-height: 120px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
 }
 
-
-
-/*Defines the layout of the sponsor images */
-.sponsor-line {
-    align-items: center;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-    row-gap: 2rem;
+/* Optional: Responsive tweaks */
+@media (max-width: 600px) {
+  .sponsor-bar img {
+    max-height: 40px;
+  }
 }
-
-
-@media(max-width: 575px){
-.sponsor-line {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-    row-gap: 2rem;
-}
-}
-
-@media screen and (max-width: 991px){
-.sponsor-line {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-    row-gap: 2rem;
-}
-}
-
-/* Defines the sponsor image's containers */
-.sponsor-item {
-  padding: 0 4%;
-}
-
-@media (max-width: 991px){
-.sponsor-item {
-    flex: 1 0 30%;
-    max-width: 30%;
-    text-align: center;
-    margin-bottom: 30px; 
-}
-}
-
-@media screen and (max-width: 575px){
-.sponsor-item {
-    flex: 1 0 100%;
-    max-width: 100%;
-    margin-bottom: 35px; 
-}
-}
-
-
-/* Update the max-width and max-height to change the size of the sponsor logos.  */
-.sponsor-item img {
-    max-width: 250px;
-    max-height: 180px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    image-rendering: auto;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-}
-
-.sponsor-item img:hover{
-	transform: scale(1.05);
-	transition: transform 0.3s ease-in-out;
-}
-
 
 
 /* Google Maps Style */
